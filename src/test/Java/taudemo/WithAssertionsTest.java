@@ -1,4 +1,4 @@
-package src.test.Java.taudemo;
+package taudemo;
 
 import org.junit.jupiter.api.Test;
 
