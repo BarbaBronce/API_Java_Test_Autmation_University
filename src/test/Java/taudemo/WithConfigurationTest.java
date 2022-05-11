@@ -1,46 +1,30 @@
 package src.test.Java.taudemo;
 
-
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import static org.junit.jupiter.api.TestInstance.Lifecycle.PER_CLASS;
 
 @TestInstance(PER_CLASS)
 
-
-public class SeleniumTest {
+public class WithConfigurationTest {
     private BrowserGetter browserGetter = new BrowserGetter();
     private WebDriver driver;
 
     @BeforeAll
-    public void beforeAll() {
-
-        driver = browserGetter.getChromeDriver();
+    public void beforeAll(){
+        driver = broserGetter.getDriver();
     }
-
     @AfterAll
-    public void afterAll() {
-
+    public void afterAll(){
         driver.quit();
     }
-
     @Test
-    public void openTheComPageAndCheckTheTitle() {
-        String expectedComTitle = "Example title";
+    public void justATest(){
         driver.get("https://www.example.com");
-        assertEquals(expectedComTitle, driver.getTitle());
+        assertEquals("Example domain",driver.getTitle());
     }
-
-    @Test
-    public void openTheOrgPageAndCheckTheTitle() {
-        String expectedOrgTitle = "Example title";
-        driver.get("https://www.example.org");
-        assertEquals(expectedOrgTitle, driver.getTitle());
-    }
-
 }
