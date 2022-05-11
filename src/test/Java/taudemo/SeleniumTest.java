@@ -1,9 +1,9 @@
-package Java.taudemo;
+package src.test.Java.taudemo;
+
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-
 
 public class SeleniumTest {
     private BrowserGetter browserGetter =  new BrowserGetter();
@@ -11,12 +11,12 @@ public class SeleniumTest {
 
     @BeforeAll
     public void beforeAll(){
-
+        driver = browserGetter.getChromeDriver();
     }
 
     @AfterAll
     public void afterAll(){
-
+        driver.quit();
     }
 
     @Test
