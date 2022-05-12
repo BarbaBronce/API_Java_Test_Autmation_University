@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import static java.lang.System.setProperty;
+import static java.security.Security.setProperty;
 import static org.apache.commons.lang3.SystemUtils.*;
 
 public class BrowserGetter {

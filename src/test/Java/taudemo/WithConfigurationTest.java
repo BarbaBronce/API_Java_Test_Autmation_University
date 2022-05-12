@@ -12,7 +12,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.TestInstance.Lifecycle.PER_CLASS;
 
 @TestInstance(PER_CLASS)
-
 public class WithConfigurationTest {
     private final BrowserGetter browserGetter = new BrowserGetter();
     private WebDriver driver;
@@ -21,10 +20,12 @@ public class WithConfigurationTest {
     public void beforeAll(){
         driver = browserGetter.getDriver();
     }
+
     @AfterAll
     public void afterAll(){
         driver.quit();
     }
+
     @Test
     public void justATest(){
         driver.get("https://www.example.com");
